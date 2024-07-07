@@ -1,64 +1,66 @@
+# Дипломный проект по профессии «Веб-разработчик»
+## Cервер для информационной системы администрирования залов, сеансов и для сайта онлайн бронирования билетов в кинотеатр.
+***
+## Решенные задачи
+* Разработана серверная часть системы для для администрирования залов, сеансов и предварительного бронирования билетов.
+* Результат работы содержится в данном git-репозитории.
+
+## Сущности
+
+1. **Кинозал**. Помещение, в котором демонстрируются фильмы. Режим работы определяется расписанием на день. Зал — прямоугольное помещение, состоит из N х M различных зрительских мест.
+2. **Зрительское место**. Место в кинозале. Есть два вида: VIP и обычное.
+3. **Фильм**. Информация о фильме заполняется администратором. Фильм связан с сеансом в кинозале.
+4. **Сеанс**. Временной промежуток, во время которого в кинозале будет показываться фильм. На сеанс могут быть забронированы билеты.
+5. **Билет**. QR-код c уникальным кодом бронирования, в котором обязательно указаны место, ряд, сеанс. Билет действителен строго на свой сеанс.
+
+## Роли пользователей системы
+* Администратор — авторизованный пользователь.
+* Гость — неавторизованный посетитель сайта.
+
+### Возможности администратора
+* Создание или редактирование залов.
+* Создание или редактирование списка фильмов.
+* Настройка цен.
+* Создание или редактирование расписания сеансов фильмов.
+
+### Возможности гостя
+* Просмотр расписания.
+* Просмотр списка фильмов.
+* Выбор места в кинозале.
+* Бронирование билета на конкретную дату.
+
+## Реализация проекта
+* Проект реализован в виде CRUD API на базе Laravel.
+
+## Технологии, использованные в проекте
+* PHP 8.1.7.
+* Laravel 9.1.10 - фреймворк для создания серверной части приложения.
+* Laravel Sanctum - пакет для осуществления аутентификации (Token API). 
+* SQLite - СУБД для хранения данных приложения.
+* [Phpqrcode](http://phpqrcode.sourceforge.net/) - библиотека для генерации QR-кода.
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Инструкция по запуску проекта
+1. Клонируйте репозиторий:
+   `git clone https://github.com/Antis85/cinema-server.git`
+2. Перейдите в каталог проекта: `cd cinema-server`
+3. Убедитесь, что установлен пакет [Composer](https://getcomposer.org/): `composer -v`
+4. Установите зависимости `composer install`
+5. Файл `.env.example` переименуйте в `.env` и произведите настройку базы данных и других параметров.
+6. Для настройки на работу с SQLite в файле .env нужно:
+    * указать тип DB_CONNECTION=sqlite
+    * в папке datebase создать файл с расширением .sqlite (или взять готовый)
+    * указать абсолютный путь к файлу .sqlite (в windows необходимо экранировать обратный слеш)
+7. Выполните команду `php artisan key:generate`
+8. В файле `php.ini` раскоментируйте следующие строки:
+```
+extension=fileinfo
+extension=gd
+extension=pdo_sqlite
+extension=openssl
+extension=php_mbstring.dll
+```
+9. Для выдачи статики, выполните команду `php artisan storage:link`
+10. Выполните миграции для создания базы данных и заполнения предустановленными значениями: `php artisan migrate:fresh --seed`
+11. Запустите приложение: `php artisan serve`
+12. Далее можно использовать приложения [клиента](https://github.com/Antis85/cinema-client) или [администратора](https://github.com/Antis85/cinema-admin).
